@@ -25,7 +25,6 @@ while(k<10):
         print(9-k,"chances are left\n")
     except:
         print("You have entered wrong input and wasted one chance\n")
-    
     k+=1
 if w_count>l_count:
     print("\n\nWINNER\nYou win",w_count,"times!!!")
