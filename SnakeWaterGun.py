@@ -7,6 +7,14 @@ def game(p1,p2):
     elif((p1=="w" and p2=="s") or (p1=="s" and p2=="g") or (p1=="g" and p2=="w")):
         return "You lose"
         
+def p2Naming(p2):
+    if(p2 == "s"):
+        return "snake";
+    elif(p2 == "w"):
+        return "water"
+    elif(p2 == "g"):
+        return "gun"
+        
 li=["s","w","g"]
 w_count=l_count=k=0
 while(k<10):
@@ -15,7 +23,8 @@ while(k<10):
         p1=input("What you choose: \nS for SNAKE\nW for WATER\nG for GUN\n\n")
         p1=p1.lower()    
         s=game(p1,p2)
-        print("Computer choose",p2,"\n",s)
+        p2Chose= p2Naming(p2)
+        print("Computer choose",p2Chose,"\n",s)
         if "win" in s:
             w_count+=1
         elif "lose" in s:
